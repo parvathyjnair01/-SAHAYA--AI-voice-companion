@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Reminder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f5f5f5;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+    input, button {
+      font-size: 1.2rem;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #27ae60;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>💊 Medicine Reminder</h1>
+  <label>Medicine Name:</label><br>
+  <input type="text" id="medicine"><br>
+  <label>Reminder Time:</label><br>
+  <input type="time" id="time"><br>
+  <button onclick="setReminder()">Set Reminder</button>
+
+  <p id="status"></p>
+
+  <script>
+    let reminder = {};
+
+    function setReminder() {
+      const med = document.getElementById('medicine').value;
+      const time = document.getElementById('time').value;
+
+      if (med && time) {
+        reminder = { medicine: med, time: time };
+        document.getElementById('status').innerText = 
+          `✅ Reminder set for ${med} at ${time}`;
+      }
+    }
+
+    setInterval(() => {
+      const now = new Date();
+      const current = now.getHours().toString().padStart(2, '0') + ":" + 
+                      now.getMinutes().toString().padStart(2, '0');
+
+      if (reminder.time === current) {
+        alert(`⏰ Time to take your medicine: ${reminder.medicine}`);
+        reminder = {}; // reset after alert
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
