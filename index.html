@@ -1,15 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medicine Reminder Website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedReminder - Create Patient Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MedReminder</h1>
+    <p class="subtitle">Your personal medicine companion</p>
 
+    <div class="form-card">
+      <h2>Create Patient Profile</h2>
+      <p class="form-desc">
+        Please provide your details to get started with your medicine reminders
+      </p>
+
+      <form id="profileForm">
+        <div class="row">
+          <div class="input-group">
+            <label>First Name *</label>
+            <input type="text" required>
+          </div>
+          <div class="input-group">
+            <label>Last Name *</label>
+            <input type="text" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label>Email *</label>
+            <input type="email" placeholder="your.email@example.com" required>
+          </div>
+          <div class="input-group">
+            <label>Phone *</label>
+            <input type="tel" placeholder="+1 (555) 123-4567" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label>Date of Birth *</label>
+            <input type="date" required>
+          </div>
+          <div class="input-group">
+            <label>Gender *</label>
+            <select required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <h3>Emergency Contact</h3>
+
+        <div class="row">
+          <div class="input-group">
+            <label>Contact Name *</label>
+            <input type="text" required>
+          </div>
+          <div class="input-group">
+            <label>Contact Phone *</label>
+            <input type="tel" required>
+          </div>
+          <div class="input-group">
+            <label>Relationship *</label>
+            <input type="text" placeholder="e.g., Spouse, Parent" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group full">
+            <label>Medical Conditions (Optional)</label>
+            <textarea placeholder="Separate multiple conditions with commas"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group full">
+            <label>Allergies (Optional)</label>
+            <textarea placeholder="Separate multiple allergies with commas"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">👤 Create Profile & Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
-
