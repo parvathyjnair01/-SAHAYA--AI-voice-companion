@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedReminder Dashboard</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Profile Card -->
+    <div class="card profile-card">
+      <div class="profile-left">
+        <div class="avatar">👤</div>
+        <div>
+          <h2 class="name">parvathy nair</h2>
+          <p class="role">Patient Profile</p>
+          <p>📧 <span id="email">parvathychumma@gmail.com</span></p>
+          <p>📞 <span id="phone">1234567890</span></p>
+          <p>🎂 <span id="age">145 years old</span></p>
+        </div>
+      </div>
+
+      <div class="profile-right">
+        <button class="logout">⏻ Logout</button>
+        <div class="emergency">
+          <h4>❤️ Emergency Contact</h4>
+          <div class="emergency-box">
+            <p><strong>Parvathy J Nair</strong></p>
+            <p>parent</p>
+            <p>12345678900</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medicine Overview -->
+    <div class="card">
+      <h3>📈 Today's Medicine Overview</h3>
+      <p>Track your daily medicine adherence</p>
+      <div class="no-data">
+        <span class="graph">〰️</span>
+        <p>No Data Available</p>
+        <small>Add some medicines and start tracking to see your statistics.</small>
+      </div>
+    </div>
+
+    <!-- Medicine Schedule -->
+    <h2>Today's Medicine Schedule</h2>
+    <p id="today-date"></p>
+
+    <div class="stats">
+      <div class="stat-box blue">
+        <p>Total Today</p>
+        <h3 id="total-today">0</h3>
+      </div>
+      <div class="stat-box green">
+        <p>Completed</p>
+        <h3 id="completed">0</h3>
+      </div>
+      <div class="stat-box orange">
+        <p>Overdue</p>
+        <h3 id="overdue">0</h3>
+      </div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
