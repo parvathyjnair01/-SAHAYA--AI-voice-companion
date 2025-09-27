@@ -26,8 +26,9 @@ FEATURES:
 ✅ Daily/weekly medicine tracking.
 
 TECH STACK:
-Frontend: HTML, CSS, JavaScript (or React if you’re using it)
 
-Backend: Node.js / Flask / Django (or mention if no backend)
+Frontend: HTML, CSS, JavaScript
 
-Database: SQLite / MongoDB / LocalStorage
+Backend: Node.js 
+
+Database:  LocalStorage
